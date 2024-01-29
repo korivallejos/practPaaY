@@ -6,18 +6,11 @@ runtime_config:
 
 skip_files:
   .env 
-
 env_variables:
-  APP_LOG:errorlog
-  APP_KEY:base64:6qS4VOsj3gT9qQacx2snIVYtyZUW1ec3i8mDNyVNcxc=
-  STORAGE_DIR: /tmp
-  
+  APP_ENV: production
+  APP_KEY: base64:6qS4VOsj3gT9qQacx2snIVYtyZUW1ec3i8mDNyVNcxc=
+  # Agrega otras variables de entorno según sea necesario
+
 handlers:
-# Serve images as static resources.
-- url: /(.+\.(gif|png|jpg))$
-  static_files: \1
-  upload: .+\.(gif|png|jpg)$
-  application_readable: true
-# Serve php scripts.
 - url: /(.+\.php)$
   script: \1
