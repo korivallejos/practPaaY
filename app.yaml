@@ -1,5 +1,5 @@
 runtime: php81
-env: standar
+env: standard
 runtime_config:
   document_root: .
 # for detecting static files in the public folder
